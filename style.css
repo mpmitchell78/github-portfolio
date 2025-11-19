@@ -1,0 +1,181 @@
+/* --- Variables & Base Styles --- */
+:root {
+    --primary-color: #008080; /* Teal Accent */
+    --secondary-color: #f4f4f4; /* Light Grey Background */
+    --text-color: #333;
+    --dark-text: #fff;
+    --font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+h1, h2, h3, h4 {
+    margin-top: 0;
+    font-weight: 700;
+}
+
+/* --- Header / Hero Section --- */
+.hero {
+    background: var(--primary-color);
+    color: var(--dark-text);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 0.1em;
+}
+
+.hero h2 {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.contact-links a {
+    color: var(--dark-text);
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 15px;
+    padding: 8px 15px;
+    border: 2px solid var(--dark-text);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-links a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* --- Section Styling --- */
+.section {
+    padding: 40px 0;
+}
+
+.section h3 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+.dark {
+    background: var(--secondary-color);
+}
+
+.dark h3 {
+    color: var(--text-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* --- Competencies Grid --- */
+.competency-grid {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.competency-grid li {
+    background: #fff;
+    padding: 15px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    font-weight: 400;
+}
+
+/* --- Experience / Job Card --- */
+.job-card {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+}
+
+.job-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.job-card h4 {
+    font-size: 1.4em;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.company-date {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.job-card ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* --- Education --- */
+.edu-card {
+    margin-bottom: 20px;
+}
+
+.edu-card h4 {
+    font-size: 1.2em;
+    margin-bottom: 2px;
+}
+
+.view-more {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 700;
+}
+
+.view-more a {
+    color: var(--primary-color);
+}
+
+/* --- Footer --- */
+footer {
+    background: #333;
+    color: var(--dark-text);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .contact-links a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+}
