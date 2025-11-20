@@ -208,6 +208,7 @@ hr {
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 30px;
+    display: block; /* Ensures single column layout on all sizes */
 }
 
 .project-card h4 {
@@ -232,6 +233,12 @@ hr {
     overflow: hidden;
     margin-bottom: 20px;
     background-color: #000;
+    /* Center and constrain the video on its own line */
+    max-width: 900px; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 40px; 
 }
 
 .video-container iframe {
@@ -271,28 +278,13 @@ footer {
     }
 }
 
+/* Ensure single column layout for projects on all screen sizes (no grid) */
 @media (min-width: 900px) {
-    /* Projects Page Layout (Video 50% / Summary 50%) */
-    .project-card {
-        display: grid;
-        grid-template-columns: 1fr 1fr; 
-        gap: 30px;
-        width: 100%; 
-    }
-    
-    .project-card .video-container {
-        grid-column: 1 / 2;
-        width: 100%; 
-        max-width: 600px; 
-        margin: 0;
-    }
-    
-    .project-summary {
-        grid-column: 2 / 3;
-    }
-
-    /* On the index page, center the content for better balance */
     #summary .container, #experience .container {
         text-align: left;
+    }
+    
+    .project-card {
+        display: block;
     }
 }
