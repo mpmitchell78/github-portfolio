@@ -265,22 +265,28 @@ footer {
 }
 
 @media (min-width: 900px) {
-    /* Projects Page Layout (Video Half Screen Width) */
+    /* Projects Page Layout (Video 50% / Summary 50%) */
     .project-card {
         display: grid;
-        grid-template-columns: 1fr 2fr; /* Video on left (1/3), summary on right (2/3) */
+        /* Updated: Now splits the space 1fr (video) and 1fr (summary) */
+        grid-template-columns: 1fr 1fr; 
         gap: 30px;
     }
     
     .project-card .video-container {
-        /* This sets the video container to fit within the 1/3 grid column */
+        /* This ensures the video uses the full width of its 50% grid column */
         grid-column: 1 / 2;
         width: 100%; 
-        max-width: 450px; /* Ensures video doesn't get excessively large on ultra-wide monitors */
-        margin: 0; /* Align left within the column */
+        max-width: 600px; /* Increased max width for better clarity */
+        margin: 0;
     }
     
     .project-summary {
         grid-column: 2 / 3;
+    }
+
+    /* On the index page, center the content for better balance */
+    #summary .container, #experience .container {
+        text-align: left;
     }
 }
