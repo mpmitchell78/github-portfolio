@@ -33,7 +33,7 @@ h1, h2, h3, h4 {
 .hero {
     background: var(--primary-color);
     color: var(--dark-text);
-    padding: 60px 0 40px; /* Reduced bottom padding */
+    padding: 60px 0 40px;
     text-align: center;
 }
 
@@ -196,6 +196,13 @@ hr {
 
 /* --- Projects Section Specific Styling (used on projects.html) --- */
 
+.project-page-title {
+    text-align: center; 
+    margin-bottom: 30px; 
+    font-size: 2.2em !important; 
+    border-bottom: none !important; 
+}
+
 .project-card {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -268,16 +275,15 @@ footer {
     /* Projects Page Layout (Video 50% / Summary 50%) */
     .project-card {
         display: grid;
-        /* Updated: Now splits the space 1fr (video) and 1fr (summary) */
         grid-template-columns: 1fr 1fr; 
         gap: 30px;
+        width: 100%; 
     }
     
     .project-card .video-container {
-        /* This ensures the video uses the full width of its 50% grid column */
         grid-column: 1 / 2;
         width: 100%; 
-        max-width: 600px; /* Increased max width for better clarity */
+        max-width: 600px; 
         margin: 0;
     }
     
