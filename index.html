@@ -45,7 +45,37 @@
             </ul>
         </div>
     </section>
-
+    
+    <section id="projects" class="section">
+        <div class="container">
+            <h3>Key Projects Showcase</h3>
+            
+            <div class="project-card">
+                <h4>Project: Compromised NAS Attack Simulation</h4>
+                
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/_21Fs6OFZMM" title="Compromised NAS Attack Simulation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <div class="project-summary">
+                    <h5>Project Introduction & Scenario</h5>
+                    <p>Tabletop exercises are a proven way to test staff responses, practise incident procedures, and build confidence in managing complex cyber scenarios. Leveraging OpenBAS (Open Breach and Attack Simulation) technology, we created four realistic, repeatable exercises aligned with organizational processes. This scenario provided valuable insights into both technical and non-technical readiness.</p>
+                    <p>The Incident Response Team (IRT) detected a persistent session on the organization’s Synology NAS from an unfamiliar IP, authenticated with a valid token and actively accessing sensitive directories. The user account belonged to a data scientist who reported being disconnected unexpectedly.</p>
+                    
+                    <h5>Attack Vector & Impact</h5>
+                    <p>The attack was traced to session hijacking via a stolen authentication token associated with a remote NAS sync connection. The attacker leveraged valid session credentials, bypassing conventional authentication alerts and controls.</p>
+                    <ul>
+                        <li>Impact: Unauthorised access to sensitive data (PII, NDIS, education data), lateral movement attempts, and regulatory/reputational risk due to sensitive data presence in immutable backups.</li>
+                        <li>Critical Challenges: Detection complexity due to use of valid tokens, sensitive data in non-compliant NAS storage, inability to delete data from immutable storage, and cross-team communication gaps.</li>
+                    </ul>
+                    
+                    <h5>Why It Matters (Key Takeaways)</h5>
+                    <p>This incident highlights the intersection of insider error and credential hijacking, exposing weaknesses in session management, data governance, and NAS security controls. It underscores the importance of holistic visibility, least privilege enforcement, and policy-driven data handling to prevent persistent exposure across backup layers.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
     <section id="experience" class="section">
         <div class="container">
             <h3>Key Professional Experience</h3>
